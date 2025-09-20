@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basil Muhammed | Developer Portfolio</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Base */
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    /* Hero */
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    header h1 span { color: #00c6ff; }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      min-height: 24px; /* space for typing effect */
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 28px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    /* Section */
+    section {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 40px auto;
+      padding: 40px 30px;
+      max-width: 950px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #00c6ff;
+      text-align: center;
+    }
+
+    /* About */
+    #about p { margin-bottom: 15px; text-align: center; }
+
+    /* Projects */
+    .project {
+      margin-bottom: 25px;
+      padding: 20px;
+      border-left: 4px solid #00c6ff;
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .project:hover { transform: translateX(5px); }
+    .project h3 { color: #00c6ff; margin-bottom: 10px; }
+    .project a { color: #ffcc00; font-weight: bold; }
+
+    /* Skills */
+    #skills ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+    #skills li {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* Contact */
+    #contact p { text-align: center; margin: 10px 0; }
+    #contact a { color: #00c6ff; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .btn { padding: 10px 20px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <header>
+    <h1>👋 Hi, I'm <span>Basil Muhammed</span></h1>
+    <p id="typing"></p>
+    <a href="#projects" class="btn">🚀 Projects</a>
+    <a href="https://github.com/Basiln7" class="btn" target="_blank">💻 GitHub</a>
+    <a href="https://linkedin.com/in/basil-mohammed-5257a3385" class="btn" target="_blank">🔗 LinkedIn</a>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a backend-focused developer specialized in <strong>Python & FastAPI</strong>.</p>
+    <p>I also code in <strong>Java</strong> and <strong>C</strong>, and design web interfaces with <strong>HTML & CSS</strong>.</p>
+    <p>Tools I use: <strong>PyCharm</strong> (Python/FastAPI), <strong>Eclipse</strong> (Java & C), <strong>VS Code</strong> (Web).</p>
+    <p>I’m now expanding into <strong>AI model building</strong>, preparing for the next step of my career in machine learning & AI.</p>
+  </section>
+
+  
+
+   <!-- Projects -->
+<section id="projects">
+  <h2>🚀 Projects</h2>
+  <div class="projects-grid">
+    
+    <!-- Todo App -->
+    <div class="project">
+      <h3>✅ FastAPI Todo App</h3>
+      <p>A full-stack Todo application with authentication, task management, and a responsive frontend.</p>
+      <ul>
+        <li>JWT-based signup & login</li>
+        <li>Add, edit, delete, and view tasks</li>
+        <li>Responsive UI with custom CSS</li>
+      </ul>
+      <p><strong>Tech Stack:</strong> FastAPI, SQLAlchemy, SQLite, HTML, CSS, JavaScript</p>
+      <a href="https://fullstack-todo-5af6.onrender.com/" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Blog App -->
+    <div class="project">
+      <h3>📝 Full-Stack Blog App</h3>
+      <p>A modern blogging platform where users can create blogs, upload images, and manage comments.</p>
+      <ul>
+        <li>JWT authentication (signup, login, logout)</li>
+        <li>Create, update, delete blogs with optional images</li>
+        <li>Add & delete comments, protected routes</li>
+      </ul>
+      <p><strong>Tech Stack:</strong> FastAPI, SQLAlchemy, SQLite, HTML, CSS, JavaScript</p>
+      <a href="https://fullstack-blog-1-it4y.onrender.com/" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Fitness Tracker (WIP) -->
+    <div class="project">
+      <h3>💪 Fitness Tracker API <span style="font-size:0.9rem; color:#ffcc00;">(Work in Progress)</span></h3>
+      <p>An API to store and retrieve user workout data, including exercises, sets, reps, and progress tracking.</p>
+      <ul>
+        <li>User workout logging system</li>
+        <li>Track sets, reps, and progress history</li>
+        <li>Simple and clean UI (in development)</li>
+      </ul>
+      <p><strong>Tech Stack (Planned):</strong> FastAPI, SQLAlchemy, SQLite/PostgreSQL, HTML/CSS/JS</p>
+      <a href="https://github.com/Basiln7/fitness-tracker" target="_blank">🔗 GitHub Repo (Building...)</a>
+    </div>
+
+  </div>
+</section>
+
+
+  
+
+  
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>FastAPI</li>
+      <li>Java</li>
+      <li>C</li>
+      <li>HTML & CSS</li>
+      <li>SQLAlchemy</li>
+      <li>PostgreSQL / SQLite</li>
+      <li>Git & Deployment</li>
+      <li>AI (Beginner)</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:basilmohammed752@gmail.com">basilmohammed752@gmail.com</a></p>
+    <p>💻 <a href="https://github.com/Basiln7" target="_blank">github.com/Basiln7</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/basil-mohammed-5257a3385" target="_blank">linkedin.com/in/basil-mohammed</a></p>
+  </section>
+
+  <script>
+    // Typing effect for hero tagline
+    const text = ["Python & FastAPI Developer", "Java & C Programmer", "Future AI Engineer"];
+    let i = 0, j = 0, currentText = "", isDeleting = false;
+    const speed = 150;
+    const typing = document.getElementById("typing");
+
+    function typeEffect() {
+      if (i < text.length) {
+        if (!isDeleting && j <= text[i].length) {
+          currentText = text[i].substring(0, j++);
+          typing.innerHTML = currentText;
+        }
+        if (isDeleting && j >= 0) {
+          currentText = text[i].substring(0, j--);
+          typing.innerHTML = currentText;
+        }
+        if (j === text[i].length + 1) { isDeleting = true; setTimeout(typeEffect, 1000); return; }
+        if (isDeleting && j === 0) { isDeleting = false; i++; if (i >= text.length) i = 0; }
+        setTimeout(typeEffect, isDeleting ? speed/2 : speed);
+      }
+    }
+    typeEffect();
+  </script>
+</body>
+</html>
